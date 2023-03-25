@@ -1,0 +1,29 @@
+.main-content {
+  background-image: linear-gradient(#000000cc, #000000cc),
+    url('/assets/images/hp-background.jpg');
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: 100% 50%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  min-height: 100vh;
+  padding: 0px 20px;
+
+  h1 {
+    text-align: center;
+    font-family: "Harry-Potter";
+    font-size: 8rem;
+    letter-spacing: 2px;
+    padding-bottom: 4rem;
+  }
+}
+
+.swiper-custom-prev,
+.swiper-custom-next {
+  opacity: 0.5;
+}
+
+.swiper-custom-active {
+  opacity: 1;
+}

@@ -1,29 +1,24 @@
-import '@mui/material/styles'
+import '@mui/material/styles/createPalette'
 
 declare module '@mui/material/styles' {
   interface Theme {
-    custom: {
-      headerHeight: number
-      root: {
-        'base-color': string
-        'main-color': string
-        'main-color-contrast': string
-        'primary-color': string
-        'primary-color-contrast': string
+    palette: {
+      custom: {
+        base: string
+        main: string
+        mainContrast: string
+        primaryContrast: string
       }
     }
   }
-  // allow configuration using `createTheme`
-  interface ThemeOptions {
+}
+declare module '@mui/material/styles/createPalette' {
+  interface PaletteOptions {
     custom: {
-      headerHeight: number
-      root: {
-        'base-color': string
-        'main-color': string
-        'main-color-contrast': string
-        'primary-color': string
-        'primary-color-contrast': string
-      }
+      base: string
+      main: string
+      mainContrast: string
+      primaryContrast: string
     }
   }
 }

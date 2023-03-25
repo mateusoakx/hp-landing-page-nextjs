@@ -1,0 +1,38 @@
+/* Hogwarts palete colors */
+
+$main-color: #f1f1f1;
+
+// Grifindor
+$griffindor-dark-red: #740001;
+$griffindor-red: #ae0001;
+$griffindor-yellow: #eeba30;
+$griffindor-gold: #d3a625;
+
+// Slytheri
+$slytherin-dark-green: #1a472a;
+$slytherin-green: #2a623d;
+$slytherin-dark-silver: #5d5d5d;
+$slytherin-light-silver: #aaaaaa;
+
+// Ravenclaw
+$ravenclaw-dark-blue: #1a472a;
+$ravenclaw-blue: #2a623d;
+$ravenclaw-grey: #5d5d5d;
+$ravenclaw-gold: #aaaaaa;
+
+//Hufflepuff
+$hufflepuff-canary: #ecb939;
+$hufflepuff-light-canary: #f0c75e;
+$hufflepuff-light-brown: #726255;
+$hufflepuff-dark-brown: #372e29;
+
+/* Breakpoints */
+@mixin phone {
+  @media (max-width: 639px) { @content; }
+}
+@mixin tablet {
+  @media (min-width: 640px) { @content; }
+}
+@mixin desktop {
+  @media (min-width: 1024px) { @content; }
+}

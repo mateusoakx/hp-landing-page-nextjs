@@ -1,0 +1,47 @@
+.character-card-container {
+  background-image: linear-gradient(#00000055, #00000055),
+    url('/assets/images/character-background.jpg');
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: 50% 50%;
+  width: 90vw;
+  height: 92vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: auto;
+
+  h2 {
+    text-align: center;
+    font-family: 'Harry-Potter-01';
+    font-size: 4rem;
+    letter-spacing: 16px;
+    margin-bottom: 20px;
+  }
+
+  @include desktop {
+    width: 40vw;
+    height: 52vh;
+    background-position: 100% 50%;
+  }
+}
+
+.character-card-content {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height: 100%;
+  gap: 20px;
+
+  @include desktop {
+    flex-direction: row;
+    gap: 50px;
+  }
+}
+
+.character-info-container {
+  img {
+    border-radius: 20%;
+  }
+}

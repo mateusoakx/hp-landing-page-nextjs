@@ -1,7 +1,4 @@
-import { useEffect } from 'react'
-// import Script from 'next/script'
 import Head from 'next/head'
-import AOS from 'aos'
 
 import { Analytics } from '@vercel/analytics/react'
 
@@ -9,18 +6,11 @@ import '@fontsource/roboto/300.css'
 import '@fontsource/roboto/400.css'
 import '@fontsource/roboto/500.css'
 import '@fontsource/roboto/700.css'
-import 'src/styles/globals.css'
-import 'aos/dist/aos.css'
+import 'src/styles/globals.scss'
 
 import type { AppProps } from 'next/app'
 
 export default function App({ Component, pageProps }: AppProps) {
-  useEffect(() => {
-    AOS.init({
-      duration: 700,
-    })
-  }, [])
-
   return (
     <>
       <Head>
@@ -123,7 +113,6 @@ export default function App({ Component, pageProps }: AppProps) {
         />
         <meta name="theme-color" content="#ffffff" />
       </Head>
-      {/* <Script src="/assets/scripts/gtm.js" /> */}
       <Component {...pageProps} />
       <Analytics />
     </>
