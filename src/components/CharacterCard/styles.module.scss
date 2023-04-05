@@ -37,7 +37,7 @@
   h2 {
     text-align: center;
     font-family: 'Harry-Potter-01';
-    font-size: 4rem;
+    font-size: 3rem;
     letter-spacing: 16px;
     padding: 0 15px;
     margin-bottom: 20px;
@@ -47,6 +47,10 @@
     width: 40vw;
     height: 52vh;
     background-position: 100% 50%;
+
+    h2 {
+      margin-bottom: 0;
+    }
   }
 }
 
@@ -89,6 +93,7 @@
 
     @include desktop {
       text-align: left;
+      max-width: 200px;
     }
   }
 }

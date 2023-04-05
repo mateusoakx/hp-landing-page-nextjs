@@ -1,8 +1,6 @@
 import React, { PropsWithChildren } from 'react'
 // Components
 import Image from 'next/image'
-// Hooks
-import { useDeviceInfo } from 'src/hooks/deviceInfo'
 //Typings
 import type { CharacterInfo } from 'src/typings/characterInfo'
 // Styles
@@ -17,7 +15,6 @@ const CharacterCard = ({
   patronus,
   gender,
 }: PropsWithChildren<CharacterInfo>) => {
-  const { isMobile } = useDeviceInfo()
   return (
     <>
       <div className={`${styles['flip-container']} common-flip-container`}>
@@ -31,18 +28,13 @@ const CharacterCard = ({
                     !alive ? styles['character-dead'] : ''
                   }`}
                 >
-                  <Image
-                    src={image}
-                    width={isMobile ? 150 : 200}
-                    height={isMobile ? 205 : 275}
-                    alt=""
-                  />
+                  <Image src={image} width={150} height={205} alt="" />
                 </div>
                 <div className={styles['house-image-container']}>
                   <Image
                     src={`/assets/images/${house}.png`}
-                    width={isMobile ? 200 : 275}
-                    height={isMobile ? 250 : 345}
+                    width={200}
+                    height={250}
                     alt=""
                   />
                 </div>
@@ -58,12 +50,7 @@ const CharacterCard = ({
                     !alive ? styles['character-dead'] : ''
                   }`}
                 >
-                  <Image
-                    src={image}
-                    width={isMobile ? 150 : 200}
-                    height={isMobile ? 205 : 275}
-                    alt=""
-                  />
+                  <Image src={image} width={150} height={205} alt="" />
                 </div>
                 <div className={styles['character-info-container']}>
                   <p>
