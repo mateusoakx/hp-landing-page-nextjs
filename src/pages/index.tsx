@@ -16,7 +16,6 @@ import 'swiper/scss/pagination'
 import 'swiper/scss/scrollbar'
 
 const Home = () => {
-  // const { isMobile } = useDeviceInfo()
   const { characters, isLoading } = useHarryPotterCharacter()
 
   return (

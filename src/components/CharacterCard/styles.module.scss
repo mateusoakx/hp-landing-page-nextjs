@@ -1,3 +1,5 @@
+@import '/src/styles/mixins.scss';
+
 .character-card-container {
   background-image: linear-gradient(#00000055, #00000055),
     url('/assets/images/character-background.jpg');

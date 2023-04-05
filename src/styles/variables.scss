@@ -25,14 +25,3 @@ $hufflepuff-canary: #ecb939;
 $hufflepuff-light-canary: #f0c75e;
 $hufflepuff-light-brown: #726255;
 $hufflepuff-dark-brown: #372e29;
-
-/* Breakpoints */
-@mixin phone {
-  @media (max-width: 639px) { @content; }
-}
-@mixin tablet {
-  @media (min-width: 640px) { @content; }
-}
-@mixin desktop {
-  @media (min-width: 1024px) { @content; }
-}

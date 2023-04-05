@@ -1,0 +1,10 @@
+/* Breakpoints */
+@mixin phone {
+  @media (max-width: 639px) { @content; }
+}
+@mixin tablet {
+  @media (min-width: 640px) { @content; }
+}
+@mixin desktop {
+  @media (min-width: 1024px) { @content; }
+}
