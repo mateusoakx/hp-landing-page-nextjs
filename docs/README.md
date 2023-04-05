@@ -20,24 +20,29 @@ Requirements for the software and other tools to build, test and push
 
 Os passos a seguir servirão para mostrar como rodar o projeto localmente, para fins de desenvolvimento e testes.
 
-Após clonar o repositório, entre na raiz do projeto e instale todas as dependências com o seguinte comando:
+1. Após clonar o repositório, configure as variáveis de ambiente criando um arquivo ".env.local" no raiz do projeto
+e definindo os valores das variáveis que se encontram em ".env.example"
 
+2. Após configurar as variáveis de ambiente, entre na raiz do projeto e instale todas as dependências com o seguinte comando:
+```
     $ yarn
+```
+3. Após instalar as dependências, o projeto está pronto para ser inicializado com o comando:
 
-Após a instalação das dependências, o projeto está pronto para ser inicializado com o comando:
-
+```
     $ yarn start
+```
 
-Isso fará com o que o projeto execute na porta 3000 do seu computador se a mesma não estiver ocupada.
+4. Isso fará com o que o projeto execute na porta 3000 do seu computador se a mesma não estiver ocupada.
 Para visualizar o projeto rodando, abra o navegador e digite: http://127.0.0.1:3000
 
 ### Style test
 
 Este projeto possui uma padronização no desenvolvimento do código através do ESLint e Prettier.
 Haverá um erro ao tentar commitar se o projeto não estiver dentro de todas as regras dessas ferramentas. Para tentar corrigir automaticamente, execute este comando:
-
+```
     $ yarn lint --fix
-
+```
 Mas caso ainda continue apresentando erro ao commitar, será necessário observar as regras que deram erro no console e corrigi-las manualmente.
 
 ## Deployment
