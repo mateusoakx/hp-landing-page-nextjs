@@ -61,6 +61,10 @@ a {
   color: inherit;
 }
 
+.swiper-slide-active {
+  opacity: 1;
+}
+
 .swiper-button-prev,
 .swiper-button-next {
   opacity: 0.5;
@@ -74,6 +78,10 @@ a {
 
 .swiper-wrapper {
   padding-bottom: 5rem;
+}
+
+.swiper-slide-active .common-flip-container:hover .common-flipper {
+  transform: rotateY(180deg);
 }
 
 @include desktop {

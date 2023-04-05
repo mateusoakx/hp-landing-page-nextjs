@@ -1,13 +1,14 @@
 // Hooks
-import CharacterCard from 'src/components/CharacterCard'
 import AppProvider from 'src/hooks'
 import CharactersProvider, {
   useHarryPotterCharacter,
 } from 'src/hooks/harryPotterCharacters'
 import { breakpoints } from 'src/styles/breakpoints'
+// Components
+import CharacterCard from 'src/components/CharacterCard'
 import { Swiper, SwiperSlide } from 'swiper/react'
+// Dependencies
 import { Navigation, A11y } from 'swiper'
-
 // Styles
 import styles from 'src/styles/pages/index/styles.module.scss'
 import 'swiper/scss'
@@ -33,7 +34,6 @@ const Home = () => {
               navigation
               slideNextClass={styles['swiper-custom-next']}
               slidePrevClass={styles['swiper-custom-prev']}
-              slideActiveClass={styles['swiper-custom-active']}
               breakpoints={{
                 // when window width is >= 320px
                 [breakpoints.values.xs]: {
@@ -55,6 +55,10 @@ const Home = () => {
                     house={character.house}
                     alive={character.alive}
                     alternate_names={character.alternate_names}
+                    actor={character.actor}
+                    dateOfBirth={character.dateOfBirth}
+                    patronus={character.patronus}
+                    gender={character.gender}
                   />
                 </SwiperSlide>
               ))}

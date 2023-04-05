@@ -1,6 +1,27 @@
 @import '/src/styles/mixins.scss';
 
-.character-card-container {
+.flipper {
+  display: flex;
+  justify-content: center;
+  width: 100%;
+  height: 100%;
+  transition: transform 0.8s;
+  transform-style: preserve-3d;
+  position: relative;
+  min-height: 800px;
+
+  @include desktop {
+    min-height: 615px;
+  }
+}
+
+.flip-front,
+.flip-back {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  backface-visibility: hidden;
+
   background-image: linear-gradient(#00000055, #00000055),
     url('/assets/images/character-background.jpg');
   background-size: cover;
@@ -29,6 +50,10 @@
   }
 }
 
+.flip-back {
+  transform: rotateY(180deg);
+}
+
 .character-card-content {
   display: flex;
   flex-direction: column;
@@ -43,8 +68,27 @@
   }
 }
 
-.character-info-container {
+.character-image-container {
   img {
     border-radius: 20%;
+  }
+}
+
+.character-dead {
+  img {
+    filter: grayscale(100%);
+  }
+}
+
+.character-info-container {
+  p {
+    font-size: 1.5rem;
+    font-weight: 600;
+    margin: 1rem 0;
+    text-align: center;
+
+    @include desktop {
+      text-align: left;
+    }
   }
 }
